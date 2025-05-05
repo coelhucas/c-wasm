@@ -95,6 +95,8 @@ void UpdateDrawFrame(void)
         enemies[enemyCount].active = true;
         enemies[enemyCount].position = initialPosition;
         enemyCount++;
+
+        if (enemyCount >= MAX_ENEMIES) enemyCount = 0;
     }
 
     for (int i = 0; i < MAX_ENEMIES ; i++) {
